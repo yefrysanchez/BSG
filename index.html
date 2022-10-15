@@ -26,38 +26,59 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <section>
-        <form>
-          <div>
-            <label for="">Horizontal Shadow Length10px </label>
+    <main class="container">
+      <section class="form__container">
+        <form class="form">
+          <div class="form__horizontal box flex">
+            <div class="value">
+              <label for="">Horizontal Shadow Length</label>
+              <span>10px</span>
+            </div>
             <input type="range" />
           </div>
-          <div>
-            <label for="">Vertical Shadow Length</label>
+          <div class="form__vertical box flex">
+            <div class="value">
+              <label for="">Vertical Shadow Length</label>
+              <span>10px</span>
+            </div>
             <input type="range" />
           </div>
-          <div>
-            <label for="">Blur Radius </label>
+          <div class="form__blur box flex">
+            <div class="value">
+              <label for="">Blur Radius</label>
+              <span>5px</span>
+            </div>
             <input type="range" />
           </div>
-          <div>
-            <label for="">Spread Radius0px </label>
+          <div class="form__spread box flex">
+            <div class="value">
+              <label for="">Spread Radius</label>
+              <span>0px</span>
+            </div>
             <input type="range" />
           </div>
-          <div>
-            <label for="">Shadow Color </label>
-            <input placeholder="Type color" type="text" />
+          <div class="form__color box flex">
+            <label for="">Shadow Color</label>
+            <div class="color">
+                <input placeholder="Type Shadow Color" type="text" />
+                <div></div>
+            </div>
           </div>
-          <div>
-            <label for="">Shadow Color Opacity</label>
+          <div class="form__opacity box flex">
+            <div class="value">
+              <label for="">Shadow Color Opacity</label>
+              <span>0.7</span>
+            </div>
             <input type="range" />
           </div>
         </form>
       </section>
 
-      <section>
-        <div></div>
+      <section class="box_shadow">
+        <div id="box"></div>
+        <div class="box_shadow__value">
+          <p>box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);</p>
+        </div>
       </section>
     </main>
   </body>
