@@ -28,6 +28,9 @@ ul {
 li {
   height: 100%;
 }
+
+
+
 .logo {
   height: 100%;
 }
@@ -81,16 +84,32 @@ li {
   padding-bottom: 0.5rem;
 }
 
-.color {
+.color{
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.color div {
+
+#color_input{
+  width: 5rem;
+  height: 4rem;
+  border: none;
+  margin: 0 1rem 0 0;
+}
+
+#color {
   width: 3.8rem;
   height: 3.8rem;
-  background-color: blueviolet;
+  background-color: rgb(0, 0, 0);
   border-end-end-radius: 0.5rem;
   border-start-end-radius: 0.5rem;
   margin-left: -0.5rem;
+  margin-right: 1rem;
+}
+
+#apply:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .box_shadow {

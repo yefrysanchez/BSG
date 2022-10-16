@@ -28,48 +28,48 @@
     </header>
     <main class="container">
       <section class="form__container">
-        <form class="form">
+        <form id="form" class="form">
           <div class="form__horizontal box flex">
             <div class="value">
               <label for="">Horizontal Shadow Length</label>
-              <span>10px</span>
+              <span class="hori">10px</span>
             </div>
-            <input type="range" />
+            <input id="hori_range" min="-100" max="100" value="10" type="range" />
           </div>
           <div class="form__vertical box flex">
             <div class="value">
               <label for="">Vertical Shadow Length</label>
-              <span>10px</span>
+              <span class="vert">10px</span>
             </div>
-            <input type="range" />
+            <input id="vert_range" min="-100" max="100" value="10" type="range" />
           </div>
           <div class="form__blur box flex">
             <div class="value">
               <label for="">Blur Radius</label>
-              <span>5px</span>
+              <span class="blur">5px</span>
             </div>
-            <input type="range" />
+            <input id="blur_range" min="0" max="100" value="5" type="range" />
           </div>
           <div class="form__spread box flex">
             <div class="value">
               <label for="">Spread Radius</label>
-              <span>0px</span>
+              <span class="spread">0px</span>
             </div>
-            <input type="range" />
+            <input id="spread_range" min="-100" max="100" value="0" type="range" />
           </div>
           <div class="form__color box flex">
             <label for="">Shadow Color</label>
             <div class="color">
-              <input placeholder="Type Shadow Color" type="text" />
-              <div></div>
+              <input id="color_input"  type="color" />
+              <span>Select Color</span>
             </div>
           </div>
           <div class="form__opacity box flex">
             <div class="value">
               <label for="">Shadow Color Opacity</label>
-              <span>0.7</span>
+              <span class="opa">0.7</span>
             </div>
-            <input type="range" />
+            <input id="opa_range" min="0" max="100" value="75" type="range" />
           </div>
         </form>
       </section>
@@ -77,9 +77,11 @@
       <section class="box_shadow">
         <div id="box"></div>
         <div class="box_shadow__value">
-          <p>box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);</p>
+          <p id="result">box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);</p>
         </div>
       </section>
     </main>
+
+    <script src="/app.js"></script>
   </body>
 </html>
