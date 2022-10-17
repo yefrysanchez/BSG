@@ -107,11 +107,6 @@ li {
   margin-right: 1rem;
 }
 
-#apply:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
 .box_shadow {
   margin-top: 10rem;
   display: flex;

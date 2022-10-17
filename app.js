@@ -41,7 +41,7 @@ form.addEventListener("change", () => {
     const r = parseInt(color.substr(1, 2), 16);
     const g = parseInt(color.substr(3, 2), 16);
     const b = parseInt(color.substr(5, 2), 16);
-    rgba = `rgba(${r},${g},${b},${opa.innerText})`;
+    rgba = `rgba(${r}, ${g}, ${b}, ${opa.innerText})`;
   });
 
   colorInput.addEventListener("change", (ev) => {
@@ -50,7 +50,7 @@ form.addEventListener("change", () => {
     const r = parseInt(color.substr(1, 2), 16);
     const g = parseInt(color.substr(3, 2), 16);
     const b = parseInt(color.substr(5, 2), 16);
-    rgba = `rgba(${r},${g},${b},${opacity / 100})`;
+    rgba = `rgba(${r}, ${g}, ${b}, ${opacity / 100})`;
   });
 
   result.innerText = `box-shadow: ${hori.innerText} ${vert.innerText} ${blur.innerText} ${spread.innerText} ${rgba};`;
