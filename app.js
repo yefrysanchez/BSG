@@ -15,44 +15,50 @@ let result = document.querySelector("#result");
 const form = document.querySelector("#form");
 let rgba = "rgba(0,0,0,0.75)";
 const box = document.querySelector("#box");
+const reset = document.querySelector("#reset");
 
 //event Listenings
 
-form.addEventListener("change", () => {
-  horiRange.addEventListener("change", (e) => {
-    hori.innerText = e.target.value + "px";
-  });
+horiRange.addEventListener("input", (e) => {
+  hori.innerText = e.target.value + "px";
+});
 
-  vertRange.addEventListener("change", (e) => {
-    vert.innerText = e.target.value + "px";
-  });
+vertRange.addEventListener("input", (e) => {
+  vert.innerText = e.target.value + "px";
+});
 
-  blurRange.addEventListener("change", (e) => {
-    blur.innerText = e.target.value + "px";
-  });
+blurRange.addEventListener("input", (e) => {
+  blur.innerText = e.target.value + "px";
+});
 
-  spreadRange.addEventListener("change", (e) => {
-    spread.innerText = e.target.value + "px";
-  });
+spreadRange.addEventListener("input", (e) => {
+  spread.innerText = e.target.value + "px";
+});
 
-  opaRange.addEventListener("change", (e) => {
-    opa.innerText = e.target.value / 100;
-    const color = colorInput.value;
-    const r = parseInt(color.substr(1, 2), 16);
-    const g = parseInt(color.substr(3, 2), 16);
-    const b = parseInt(color.substr(5, 2), 16);
-    rgba = `rgba(${r}, ${g}, ${b}, ${opa.innerText})`;
-  });
+opaRange.addEventListener("input", (e) => {
+  opa.innerText = e.target.value / 100;
+  const color = colorInput.value;
+  const r = parseInt(color.substr(1, 2), 16);
+  const g = parseInt(color.substr(3, 2), 16);
+  const b = parseInt(color.substr(5, 2), 16);
+  rgba = `rgba(${r}, ${g}, ${b}, ${opa.innerText})`;
+});
 
-  colorInput.addEventListener("change", (ev) => {
-    const color = ev.target.value;
-    const opacity = opaRange.value;
-    const r = parseInt(color.substr(1, 2), 16);
-    const g = parseInt(color.substr(3, 2), 16);
-    const b = parseInt(color.substr(5, 2), 16);
-    rgba = `rgba(${r}, ${g}, ${b}, ${opacity / 100})`;
-  });
+colorInput.addEventListener("input", (ev) => {
+  const color = ev.target.value;
+  const opacity = opaRange.value;
+  const r = parseInt(color.substr(1, 2), 16);
+  const g = parseInt(color.substr(3, 2), 16);
+  const b = parseInt(color.substr(5, 2), 16);
+  rgba = `rgba(${r}, ${g}, ${b}, ${opacity / 100})`;
+});
 
+reset.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.reload();
+});
+
+form.addEventListener("input", () => {
   result.innerText = `box-shadow: ${hori.innerText} ${vert.innerText} ${blur.innerText} ${spread.innerText} ${rgba};`;
   box.style.boxShadow = `${hori.innerText} ${vert.innerText} ${blur.innerText} ${spread.innerText} ${rgba}`;
 });
